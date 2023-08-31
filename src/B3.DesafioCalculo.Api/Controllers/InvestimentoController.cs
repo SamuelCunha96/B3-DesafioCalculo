@@ -17,10 +17,10 @@ namespace B3.DesafioCalculo.Api.Controllers
         }
 
         [HttpPost("calcular-cdb")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CalculoInvestimentoCDBCommandVM))]
-        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(BaseResponseDTO<object>))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CalculoInvestimentoCdbCommandVm))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(BaseResponseDto<object>))]
 
-        public async Task<IActionResult> CalcularCdbAsync([FromBody] CalculoInvestimentoCDBCommand command) 
+        public async Task<IActionResult> CalcularCdbAsync([FromBody] CalculoInvestimentoCdbCommand command) 
         {
             var resultado = await _mediator.Send(command);
             return Ok(resultado);

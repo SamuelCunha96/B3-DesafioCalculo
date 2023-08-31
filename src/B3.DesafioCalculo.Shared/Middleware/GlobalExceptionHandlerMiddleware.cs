@@ -30,7 +30,7 @@ namespace B3.DesafioCalculo.Shared.Middleware
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)statusCode;
 
-            IEnumerable<string> mensagensErro = null;
+            IEnumerable<string> mensagensErro;
 
             switch (exception)
             {
@@ -45,7 +45,7 @@ namespace B3.DesafioCalculo.Shared.Middleware
                     break;
             }
 
-            return context.Response.WriteAsync(new BaseResponseDTO<object>(null!, false, (int)statusCode, mensagensErro).ToJsonIgnoringNullValues());
+            return context.Response.WriteAsync(new BaseResponseDto<object>(null!, false, (int)statusCode, mensagensErro).ToJsonIgnoringNullValues());
         }
     }
 }

@@ -4,8 +4,7 @@
     {
         public static double ObterTaxaDeImpostos(this int prazoMeses) 
         {
-            var taxaDeImpostos = 0.0d;
-
+            double taxaDeImpostos;
             if (prazoMeses <= 6)
                 taxaDeImpostos = 0.225;
             else if (prazoMeses <= 12)
