@@ -1,6 +1,4 @@
-﻿using System.Net;
-
-namespace B3.DesafioCalculo.Shared.DTO
+﻿namespace B3.DesafioCalculo.Shared.DTO
 {
     public class BaseResponseDto<TData> where TData : class
     {
