@@ -1,11 +1,6 @@
 ﻿using B3.DesafioCalculo.Business.Business;
 using B3.DesafioCalculo.Shared.Settings;
 using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace B3.DesafioCalculo.UnitTests.Business
 {
@@ -38,7 +33,7 @@ namespace B3.DesafioCalculo.UnitTests.Business
             double valorBruto = _calculadora.CalcularRendimentoBrutoCDB(valorInicial, prazoMeses);
 
             // Assert
-            Assert.That(valorBruto, Is.EqualTo(2000)); // O terceiro parâmetro é a tolerância
+            Assert.That(valorBruto, Is.EqualTo(2000));
         }
     }
 }
